@@ -1,0 +1,22 @@
+﻿@model List< _03_ViewDataYViewBag.Models.clsPersona>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Listado</title>
+</head>
+<body>
+    <div>
+        @foreach (_03_ViewDataYViewBag.Models.clsPersona temp in Model)
+        {
+            <b>@temp.nombre @temp.apellidos</b><br/>
+        }        
+    </div>
+</body>
+</html>

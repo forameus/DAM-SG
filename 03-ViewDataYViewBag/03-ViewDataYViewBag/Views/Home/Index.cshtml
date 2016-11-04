@@ -1,0 +1,37 @@
+﻿@model _03_ViewDataYViewBag.Models.clsPersona
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+</head>
+<body>
+    <div> 
+        <h3>ViewData</h3>
+
+        Hola, @ViewData["Nombre"] @ViewData["Apellidos"].
+        <br/>
+
+
+        <h3>ViewBag</h3>
+        
+        Hola, @ViewBag.Nombre @ViewBag.Apellidos.
+        <br/>
+
+        <h3>Model</h3>
+        
+        Hola, @Model.nombre @Model.apellidos.
+        <br/><br/>
+
+
+        @Html.ActionLink("Pulse aquí para ir al listado", "Listado")
+    </div>
+</body>
+</html>
