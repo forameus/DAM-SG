@@ -38,8 +38,7 @@ namespace WPFSample_DAL
             this.user = "prueba";
             //this.user = "pruebaResident";
             this.pass = "123";
-
-            this.host = "192.168.0.161";
+            this.host = "107-01";
 
         }
         //Con parámetros por si quisiera cambiar las conexiones
@@ -71,7 +70,7 @@ namespace WPFSample_DAL
                 //Muy cómoda esta forma de escribir la cadena conStringFormat, metiendo los parametros entre llaves y asignandoselo tras la coma
 
                 //connection.ConnectionString = string.Format("server=(local);database={0};uid={1};pwd={2};", dataBase, user, pass);
-                connection.ConnectionString = string.Format("server=(0);database={1};uid={2};pwd={3};",host, dataBase, user, pass);
+                connection.ConnectionString = string.Format("server={0};database={1};uid={2};pwd={3};",host, dataBase, user, pass);
 
                 connection.Open();
             }

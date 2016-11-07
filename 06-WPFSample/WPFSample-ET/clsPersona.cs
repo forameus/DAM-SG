@@ -16,12 +16,18 @@ namespace WPFSample_ET
     {
         //atributos
         [Required]
+        [Display(Name = "Nombre")]
         public string nombre { get; set; }
         [Required]
+        [Display(Name = "Apellidos")]
         public string apellidos { get; set; }
+        [Display(Name = "ID")]
         public int id { get; set; }
+        [Display(Name = "Fecha de Nacimiento")]
         public DateTime fechaNac { get; set; }
+        [Display(Name = "Dirección")]
         public string direccion { get; set; }
+        [Display(Name = "Teléfono")]
         public string telefono { get; set; }
 
         //constructores

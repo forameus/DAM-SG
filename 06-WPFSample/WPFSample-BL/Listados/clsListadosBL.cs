@@ -16,6 +16,8 @@ namespace WPFSample_BL.Listados
             List<clsPersona> lista = new List<clsPersona>();
             clsListadosDAL milista = new clsListadosDAL();
 
+            lista = milista.getListadoPersonasDAL();
+
             return lista;
         }
 
