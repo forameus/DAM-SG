@@ -47,9 +47,9 @@ namespace WPFSample_DAL
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw e;
             }
 
             return listadoPersonas;

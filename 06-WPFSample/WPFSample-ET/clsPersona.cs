@@ -24,6 +24,7 @@ namespace WPFSample_ET
         [Display(Name = "ID")]
         public int id { get; set; }
         [Display(Name = "Fecha de Nacimiento")]
+        [DisplayFormat(ApplyFormatInEditMode =true, DataFormatString ="{0:dd/MM/yyyy}")]
         public DateTime fechaNac { get; set; }
         [Display(Name = "Dirección")]
         public string direccion { get; set; }

@@ -54,12 +54,85 @@ namespace WPFSample_UI.Controllers
                 }
                 catch (Exception)
                 {
-                    throw;
+                    return View("Error");
                 }
 
             }
 
         }
+
+        public ActionResult Edit(int id)
+        {
+
+            try
+            {
+                clsManejadoraPersonaBL oManejadoraPersonaBL = new clsManejadoraPersonaBL();
+                clsPersona p = oManejadoraPersonaBL.getPersona(id);
+
+                return View(p);
+            }
+            catch
+            {
+                return View("Error");
+            }
+            
+        }
+
+        [HttpPost]
+        public ActionResult Edit(clsPersona persona)
+        {
+            int i;
+
+            try
+            {
+                clsManejadoraPersonaBL oManejadoraPersonaBL = new clsManejadoraPersonaBL();
+                i = oManejadoraPersonaBL.updatePersona(persona);
+
+                clsListadosBL oListadoBL = new clsListadosBL();
+                return View("Index", oListadoBL.getListadoPersonaBL());
+            }
+            catch (Exception)
+            {
+                return View("Error");
+            }
+
+
+        }
+
+
+ 
+        public ActionResult Details(clsPersona persona)
+        {
+            clsPersona p;
+            
+                try
+                {
+                    clsManejadoraPersonaBL oManejadoraPersonaBL = new clsManejadoraPersonaBL();
+                    p = oManejadoraPersonaBL.getPersona(persona.id);
+                    return View(p);
+                }
+                catch (Exception)
+                {
+                    return View("Error");
+                }            
+        }
+
+        public ActionResult Delete(clsPersona p)
+        {
+            int i;
+
+            try
+            {
+                clsManejadoraPersonaBL oManejadoraPersonaBL = new clsManejadoraPersonaBL();
+                i = oManejadoraPersonaBL.deletePersona(p.id);
+                return View(p);
+            }
+            catch (Exception)
+            {
+                return View("Error");
+            }
+        }
+
 
     }
 
