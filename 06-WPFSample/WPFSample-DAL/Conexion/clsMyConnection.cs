@@ -24,27 +24,25 @@ namespace WPFSample_DAL
     public class clsMyConnection
     {
         //Atributos
-        public String dataBase { get; set; }
-        public String user { get; set; }
-        public String pass { get; set; }
-        public String host { get; set; }
+        public string dataBase { get; set; }
+        public string user { get; set; }
+        public string pass { get; set; }
+        public string host { get; set; }
 
         //Constructores
 
         public clsMyConnection()
         {
-            this.dataBase = "WPFSample";
-            //El primer usuario es de de la base de datos del instituto, el segundo la de casa
-            this.user = "prueba";
-            //this.user = "pruebaResident";
-            this.pass = "123";
-            this.host = "107-01";
+            dataBase = "WPFSample";
+            user = "prueba";
+            pass = "123";
+            host = "107-01";
 
         }
         //Con parámetros por si quisiera cambiar las conexiones
-        public clsMyConnection(String host, String database, String user, String pass)
+        public clsMyConnection(string host, string dataBase, string user, string pass)
         {
-            this.dataBase = database;
+            this.dataBase = dataBase;
             this.user = user;
             this.pass = pass;
             this.host = host;
@@ -70,7 +68,8 @@ namespace WPFSample_DAL
                 //Muy cómoda esta forma de escribir la cadena conStringFormat, metiendo los parametros entre llaves y asignandoselo tras la coma
 
                 //connection.ConnectionString = string.Format("server=(local);database={0};uid={1};pwd={2};", dataBase, user, pass);
-                connection.ConnectionString = string.Format("server={0};database={1};uid={2};pwd={3};",host, dataBase, user, pass);
+                //connection.ConnectionString = string.Format("server={0};database={1};uid={2};pwd={3};", host, dataBase, user, pass);
+                connection.ConnectionString = "Server=tcp:iesnervion.database.windows.net,1433;Initial Catalog=WPFSample;Persist Security Info=False;User ID=prueba;Password=iesnervion123.;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;";
 
                 connection.Open();
             }

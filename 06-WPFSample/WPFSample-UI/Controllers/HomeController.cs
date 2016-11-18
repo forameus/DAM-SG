@@ -15,17 +15,18 @@ namespace WPFSample_UI.Controllers
         public ActionResult Index()
         {
             clsListadosBL milista;
-
+            List<clsPersona> laLista;
             try
             {
                 milista = new clsListadosBL();
+                laLista = milista.getListadoPersonaBL();
             }
             catch (Exception)
             {
-                return View("paginaError");
+                return View("Error");
             }
 
-            return View(milista.getListadoPersonaBL());
+            return View(laLista);
         }
 
         public ActionResult Create()
@@ -52,9 +53,10 @@ namespace WPFSample_UI.Controllers
                     clsListadosBL oListadoBL = new clsListadosBL();
                     return View("Index", oListadoBL.getListadoPersonaBL());
                 }
-                catch (Exception)
+                catch (Exception e)
                 {
-                    return View("Error");
+                    //return View("Error");
+                    throw e;
                 }
 
             }
@@ -71,9 +73,9 @@ namespace WPFSample_UI.Controllers
 
                 return View(p);
             }
-            catch
+            catch(Exception )
             {
-                return View("Error");
+                return View("Error");                
             }
             
         }
@@ -117,15 +119,36 @@ namespace WPFSample_UI.Controllers
                 }            
         }
 
-        public ActionResult Delete(clsPersona p)
+
+        public ActionResult Delete(int id)
+        {
+
+            try
+            {
+                clsManejadoraPersonaBL oManejadoraPersonaBL = new clsManejadoraPersonaBL();
+                clsPersona p = oManejadoraPersonaBL.getPersona(id);
+
+                return View(p);
+            }
+            catch (Exception)
+            {
+                return View("Error");
+            }
+
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirm(int id)
         {
             int i;
 
             try
             {
                 clsManejadoraPersonaBL oManejadoraPersonaBL = new clsManejadoraPersonaBL();
-                i = oManejadoraPersonaBL.deletePersona(p.id);
-                return View(p);
+                i = oManejadoraPersonaBL.deletePersona(id);
+
+                clsListadosBL oListadoBL = new clsListadosBL();
+                return View("Index", oListadoBL.getListadoPersonaBL()); ;
             }
             catch (Exception)
             {

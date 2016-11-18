@@ -13,13 +13,20 @@ namespace WPFSample_BL.Listados
     {
         public List<clsPersona> getListadoPersonaBL()
         {
-            List<clsPersona> lista = new List<clsPersona>();
-            clsListadosDAL milista = new clsListadosDAL();
+            try
+            {
+                List<clsPersona> lista = new List<clsPersona>();
+                clsListadosDAL milista = new clsListadosDAL();
 
-            lista = milista.getListadoPersonasDAL();
+                lista = milista.getListadoPersonasDAL();
 
-            return lista;
+                return lista;
+            }
+            catch(Exception e)
+            {
+                throw e;
+            }  
+                      
         }
-
     }
 }

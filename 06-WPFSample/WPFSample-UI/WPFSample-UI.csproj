@@ -128,6 +128,7 @@
     <Content Include="scripts\jquery.validate.min.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Views\Home\error.jpg" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

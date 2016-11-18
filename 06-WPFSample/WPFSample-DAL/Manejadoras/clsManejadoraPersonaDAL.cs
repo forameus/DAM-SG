@@ -16,7 +16,12 @@ namespace WPFSample_DAL.Manejadoras
 
         public clsManejadoraPersonaDAL()
         {
-            miConexion = new clsMyConnection();
+            //miConexion = new clsMyConnection();
+            //miConexion = new clsMyConnection("107-01", "WPFSample", "prueba","123");
+            miConexion = new clsMyConnection("iesnervion.database.windows.net", "WPFSample", "prueba", "iesnervion123.");
+
+
+
         }
 
 
@@ -104,7 +109,7 @@ namespace WPFSample_DAL.Manejadoras
             clsPersona res;
 
             //Añadir datos al comando
-            miComando.Parameters.Add("@id", System.Data.SqlDbType.VarChar).Value = id;
+            miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
             try
             {
                 conexion = miConexion.getConnection();
@@ -158,7 +163,7 @@ namespace WPFSample_DAL.Manejadoras
             int res;
 
             //Añadir datos al comando
-            miComando.Parameters.Add("@id", System.Data.SqlDbType.VarChar).Value = id;
+            miComando.Parameters.Add("@id", System.Data.SqlDbType.Int).Value = id;
             try
             {
                 conexion = miConexion.getConnection();

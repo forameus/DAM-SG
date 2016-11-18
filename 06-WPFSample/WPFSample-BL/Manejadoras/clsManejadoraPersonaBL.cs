@@ -15,7 +15,14 @@ namespace WPFSample_BL.Manejadoras
 
         public clsManejadoraPersonaBL()
         {
-            oManejadoraPersonaDAL = new clsManejadoraPersonaDAL();
+            try
+            {
+                oManejadoraPersonaDAL = new clsManejadoraPersonaDAL();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
         }
 
         /// <summary>
