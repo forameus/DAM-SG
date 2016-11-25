@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+
+        @using (Html.BeginForm())
+        {
+            <p>
+                <label>CONTADOR ViewBag: @ViewBag.contador</label><br/>
+                <label>CONTADOR Cookies: @Request.Cookies["contador"].Value</label>
+            </p>
+            <p>
+                <input type="submit" value="+ 1"/>
+            </p>
+        }
+    </div>
+</body>
+</html>
