@@ -1,0 +1,4 @@
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-ET\bin\Debug\Ejercicio1-ET.dll
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-ET\bin\Debug\Ejercicio1-ET.pdb
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-ET\obj\Debug\Ejercicio1-ET.dll
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-ET\obj\Debug\Ejercicio1-ET.pdb

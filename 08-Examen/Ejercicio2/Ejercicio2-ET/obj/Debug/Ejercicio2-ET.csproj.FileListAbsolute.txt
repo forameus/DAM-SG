@@ -1,0 +1,5 @@
+C:\Users\anavarro\Desktop\SG\Ejercicio2\Ejercicio2-ET\bin\Debug\Ejercicio2-ET.dll
+C:\Users\anavarro\Desktop\SG\Ejercicio2\Ejercicio2-ET\bin\Debug\Ejercicio2-ET.pdb
+C:\Users\anavarro\Desktop\SG\Ejercicio2\Ejercicio2-ET\obj\Debug\Ejercicio2-ET.csprojResolveAssemblyReference.cache
+C:\Users\anavarro\Desktop\SG\Ejercicio2\Ejercicio2-ET\obj\Debug\Ejercicio2-ET.dll
+C:\Users\anavarro\Desktop\SG\Ejercicio2\Ejercicio2-ET\obj\Debug\Ejercicio2-ET.pdb

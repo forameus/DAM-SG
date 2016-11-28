@@ -36,7 +36,7 @@ namespace WPFSample_DAL
             dataBase = "WPFSample";
             user = "prueba";
             pass = "123";
-            host = "107-01";
+            host = "107-08";
 
         }
         //Con parámetros por si quisiera cambiar las conexiones

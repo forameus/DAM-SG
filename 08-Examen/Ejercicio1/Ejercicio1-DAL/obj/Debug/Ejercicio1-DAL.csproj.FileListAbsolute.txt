@@ -1,0 +1,7 @@
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-DAL\bin\Debug\Ejercicio1-DAL.dll
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-DAL\bin\Debug\Ejercicio1-DAL.pdb
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-DAL\bin\Debug\Ejercicio1-ET.dll
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-DAL\bin\Debug\Ejercicio1-ET.pdb
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-DAL\obj\Debug\Ejercicio1-DAL.csprojResolveAssemblyReference.cache
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-DAL\obj\Debug\Ejercicio1-DAL.dll
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-DAL\obj\Debug\Ejercicio1-DAL.pdb

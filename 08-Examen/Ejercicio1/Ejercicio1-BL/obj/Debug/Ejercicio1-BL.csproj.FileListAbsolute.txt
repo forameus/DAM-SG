@@ -1,0 +1,9 @@
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-BL\bin\Debug\Ejercicio1-BL.dll
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-BL\bin\Debug\Ejercicio1-BL.pdb
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-BL\obj\Debug\Ejercicio1-BL.dll
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-BL\obj\Debug\Ejercicio1-BL.pdb
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-BL\obj\Debug\Ejercicio1-BL.csprojResolveAssemblyReference.cache
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-BL\bin\Debug\Ejercicio1-DAL.dll
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-BL\bin\Debug\Ejercicio1-ET.dll
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-BL\bin\Debug\Ejercicio1-DAL.pdb
+C:\Users\anavarro\Desktop\SG\Ejercicio1\Ejercicio1-BL\bin\Debug\Ejercicio1-ET.pdb

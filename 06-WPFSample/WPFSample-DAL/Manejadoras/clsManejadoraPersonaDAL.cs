@@ -16,9 +16,9 @@ namespace WPFSample_DAL.Manejadoras
 
         public clsManejadoraPersonaDAL()
         {
-            //miConexion = new clsMyConnection();
-            //miConexion = new clsMyConnection("107-01", "WPFSample", "prueba","123");
-            miConexion = new clsMyConnection("iesnervion.database.windows.net", "WPFSample", "prueba", "iesnervion123.");
+            miConexion = new clsMyConnection();
+            //miConexion = new clsMyConnection("107-08", "WPFSample", "prueba","123");
+            //miConexion = new clsMyConnection("iesnervion.database.windows.net", "WPFSample", "prueba", "iesnervion123.");
 
 
 
