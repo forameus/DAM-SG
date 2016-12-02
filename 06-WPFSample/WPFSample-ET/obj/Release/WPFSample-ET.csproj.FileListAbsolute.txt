@@ -1,0 +1,5 @@
+C:\Users\anavarro\Desktop\SG\VisualStudio\06-WPFSample\WPFSample-ET\bin\Release\WPFSample-ET.dll
+C:\Users\anavarro\Desktop\SG\VisualStudio\06-WPFSample\WPFSample-ET\bin\Release\WPFSample-ET.pdb
+C:\Users\anavarro\Desktop\SG\VisualStudio\06-WPFSample\WPFSample-ET\obj\Release\WPFSample-ET.csprojResolveAssemblyReference.cache
+C:\Users\anavarro\Desktop\SG\VisualStudio\06-WPFSample\WPFSample-ET\obj\Release\WPFSample-ET.dll
+C:\Users\anavarro\Desktop\SG\VisualStudio\06-WPFSample\WPFSample-ET\obj\Release\WPFSample-ET.pdb
