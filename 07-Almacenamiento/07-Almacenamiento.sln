@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-Sessions", "07-Sessions\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-Cookies", "Cookies\07-Cookies.csproj", "{17BFCD20-F435-4A85-B1C0-99433842F5DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07-RoutedParam", "07-RoutedParam\07-RoutedParam.csproj", "{96870955-9E97-4F2D-9C93-48EBC6FB96C5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{17BFCD20-F435-4A85-B1C0-99433842F5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17BFCD20-F435-4A85-B1C0-99433842F5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17BFCD20-F435-4A85-B1C0-99433842F5DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96870955-9E97-4F2D-9C93-48EBC6FB96C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96870955-9E97-4F2D-9C93-48EBC6FB96C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96870955-9E97-4F2D-9C93-48EBC6FB96C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96870955-9E97-4F2D-9C93-48EBC6FB96C5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -62,8 +62,9 @@ namespace WPFSample_UI.Controllers
                     clsManejadoraPersonaBL oManejadoraPersonaBL = new clsManejadoraPersonaBL();
                     i = oManejadoraPersonaBL.insertPersona(persona);
 
-                    clsListadosBL oListadoBL = new clsListadosBL();
-                    return View("Index", oListadoBL.getListadoPersonaBL());
+                    /*clsListadosBL oListadoBL = new clsListadosBL();
+                    return View("Index", oListadoBL.getListadoPersonaBL());*/
+                    return RedirectToAction("Index");
                 }
                 catch (Exception e)
                 {
@@ -112,8 +113,9 @@ namespace WPFSample_UI.Controllers
                 clsManejadoraPersonaBL oManejadoraPersonaBL = new clsManejadoraPersonaBL();
                 i = oManejadoraPersonaBL.updatePersona(persona);
 
-                clsListadosBL oListadoBL = new clsListadosBL();
-                return View("Index", oListadoBL.getListadoPersonaBL());
+                /*clsListadosBL oListadoBL = new clsListadosBL();
+                return View("Index", oListadoBL.getListadoPersonaBL());*/
+                return RedirectToAction("Index");
             }
             catch (Exception)
             {
@@ -183,8 +185,9 @@ namespace WPFSample_UI.Controllers
                 clsManejadoraPersonaBL oManejadoraPersonaBL = new clsManejadoraPersonaBL();
                 i = oManejadoraPersonaBL.deletePersona(id);
 
-                clsListadosBL oListadoBL = new clsListadosBL();
-                return View("Index", oListadoBL.getListadoPersonaBL()); ;
+                /*clsListadosBL oListadoBL = new clsListadosBL();
+                return View("Index", oListadoBL.getListadoPersonaBL()); ;*/
+                return RedirectToAction("Index");
             }
             catch (Exception)
             {
