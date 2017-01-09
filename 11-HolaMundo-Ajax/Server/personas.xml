@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<personas>
+  <persona>
+    <nombre>Alberto</nombre>
+    <apellidos>Navarro</apellidos>
+  </persona>
+
+  <persona>
+    <nombre>Roberto</nombre>
+    <apellidos>Asturiano</apellidos>
+  </persona>
+
+  <persona>
+     <nombre>Filiberto</nombre>
+     <apellidos>Nianoniano</apellidos>
+   </persona>
+</personas>

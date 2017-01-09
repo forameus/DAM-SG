@@ -14,7 +14,7 @@ function boton() {
         document.getElementById("errorNombre").innerText = "";
 
     if (apellidos===""){
-        document.getElementById("errorApellido").innerText = "El nombre no puede estar vácio.";
+        document.getElementById("errorApellido").innerText = "El apellido no puede estar vácio.";
         ok = false;
     }else
         document.getElementById("errorApellido").innerText = "";
