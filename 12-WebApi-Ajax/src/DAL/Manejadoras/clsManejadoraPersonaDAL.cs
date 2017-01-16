@@ -41,7 +41,7 @@ namespace DAL.Manejadoras
             //Añadir datos al comando
             miComando.Parameters.Add("@nombre", System.Data.SqlDbType.VarChar).Value = persona.nombre;
             miComando.Parameters.Add("@apellidos", System.Data.SqlDbType.VarChar).Value = persona.apellidos;
-            miComando.Parameters.Add("@fechaNac", System.Data.SqlDbType.VarChar).Value = persona.fechaNac;
+            miComando.Parameters.Add("@fechaNac", System.Data.SqlDbType.Date).Value = persona.fechaNac;
             miComando.Parameters.Add("@direccion", System.Data.SqlDbType.VarChar).Value = persona.direccion;
             miComando.Parameters.Add("@telefono", System.Data.SqlDbType.VarChar).Value = persona.telefono;
 

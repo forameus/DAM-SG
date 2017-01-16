@@ -8,5 +8,20 @@
 <body>   
     <h2>Personas</h2>
     <div id="txtContenedor" style="border:black 1px solid"></div>
+    <br />
+    <input id="txbIDBorrar" type="text" placeholder="ID de la persona" inputmode="numeric"/>    
+    <button id="btnBorrar" onclick="borrar()">BORRAR</button>
+    <br /><br />
+    <div id="txtCreacion" style="border:black 1px solid">
+        <form>           
+            Nombre:   <input id="txtPNombre" type="text" placeholder="Nombre" /><br />
+            Apellidos:   <input id="txtPApellidos" type="text" placeholder="Apellidos" /><br />
+            Fecha de Nacimiento:   <input id="txtPFechaNamicion" type="date" placeholder="dd/mm/aaaa" /><br />
+            Dirección:   <input id="txtPDireccion" type="text" placeholder="Dirección" /><br />
+            Teléfono:   <input id="txtPTelefono" type="text" placeholder="Teléfono" /><br />
+            <input id="btnSubmit" type="submit" value="CREAR" />  
+                      
+        </form>
+    </div>
 </body>
 </html>
