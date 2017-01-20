@@ -5,7 +5,8 @@ function start() {
     listar();
 }
 
-function listar() {    
+function listar() {
+    document.getElementById("txtContenedor").innerText = "Cargando..."
     var oXML = new XMLHttpRequest();
     oXML.open("GET", "../api/persona/");
     oXML.onreadystatechange = function () {
@@ -16,7 +17,7 @@ function listar() {
             var p = new Persona();
             for (var i = 0; i < datos.length; i++) {
                 p = datos[i];
-                document.getElementById("txtContenedor").innerHTML += p.nombre+" "+p.apellidos+" - <button id=\"btnMod\" onclick=\"editar("+p.id+")\">Editar</button> <br/> ";
+                document.getElementById("txtContenedor").innerHTML += p.nombre + " " + p.apellidos + " - <button id=\"btnMod"+p.id+"\" onclick=\"editar(" + p.id + ")\">Editar</button>   <button id=\"btnBorrar"+p.id+"\" onclick=\"borrar(" + p.id + ")\">Borrar</button><br/> ";
             }           
             
         } else {
@@ -26,7 +27,7 @@ function listar() {
     oXML.send();
 }
 
-
+//Deprecated
 function borrar() {
     //Comprobar si la Id está vacía
     var id = document.getElementById("txbIDBorrar").value;
@@ -40,6 +41,20 @@ function borrar() {
         oXML.send();        
         setTimeout(listar, 1000);
     }    
+}
+
+function borrar(id) {
+    //Comprobar si la Id está vacía   
+    if (id != "") {
+        var oXML = new XMLHttpRequest();
+        var res = true;
+        oXML.open("DELETE", "../api/persona/" + id);
+        oXML.onreadystatechange = function () {
+            res = (oXML.readyState == 4 && oXML.status == 200);
+        }
+        oXML.send();
+        setTimeout(listar, 1000);
+    }
 }
 
 function crear(e) {
@@ -83,4 +98,30 @@ function convertirFecha(inputFormat) {
     function pad(s) { return (s < 10) ? '0' + s : s; }
     var d = new Date(inputFormat);
     return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join('/');
+}
+
+function editar(id) {    
+    var oXML = new XMLHttpRequest();
+    oXML.open("GET", "../api/persona/"+id);    
+    oXML.onreadystatechange = function () {
+        if (oXML.readyState == 4 && oXML.status == 200) {
+            var respXML = oXML.response;
+            var dato = JSON.parse(oXML.responseText);            
+            var p = new Persona();
+            p = dato;
+            document.getElementById("txtPNombre").value = p.nombre;
+            document.getElementById("txtPApellidos").value = p.apellidos;
+            document.getElementById("txtPFechaNamicion").value = new Date(p.fechaNac);
+            document.getElementById("txtPDireccion").value = p.direccion;
+            document.getElementById("txtPTelefono").value = p.telefono;
+            var fecha = new Date(p.fechaNac);
+            var year = fecha.getFullYear();
+            var month = fecha.getMonth();
+            var day = fecha.getDay();
+            var fechaBien(fecha.get);
+            alert(fechadate);
+        } 
+            
+    };    
+    oXML.send();
 }
