@@ -100,6 +100,7 @@ function convertirFecha(inputFormat) {
     return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join('/');
 }
 
+//Mostrar datos en el form
 function editar(id) {    
     var oXML = new XMLHttpRequest();
     oXML.open("GET", "../api/persona/"+id);    
@@ -124,4 +125,32 @@ function editar(id) {
             
     };    
     oXML.send();
+}
+    
+   
+function actualizar() {
+    var oActualizar = new XMLHttpRequest();
+    
+    //Crear objeto persona    
+    var nombre = document.getElementById("txtPNombre").value;
+    var apellidos = document.getElementById("txtPApellidos").value;
+    var fechaNac = document.getElementById("txtPFechaNamicion").value;
+    var direccion = document.getElementById("txtPDireccion").value;
+    var telefono = document.getElementById("txtPTelefono").value;
+    
+    //Comprobar persona válida
+    if (nombre != "" && apellidos != "" && fechaNac != null && direccion != "" && telefono != "") {
+        alert("Datos válidos");
+        var p = new Persona(nombre, apellidos, 0, fechaNac, direccion, telefono);
+        var json = JSON.stringify(p);
+
+        //Reinsertar persona en la sociedad
+        var oXML = new XMLHttpRequest();
+        var res = true;
+        oXML.open("PUT", "../api/Persona/" + id, true);
+        oXML.setRequestHeader("Content-Type", "application/json")        
+        oXML.send(json);
+
+        setTimeout(listar, 1000);
+    }  
 }
