@@ -27,21 +27,7 @@ function listar() {
     oXML.send();
 }
 
-//Deprecated
-function borrar() {
-    //Comprobar si la Id está vacía
-    var id = document.getElementById("txbIDBorrar").value;
-    if (id != "") {
-        var oXML = new XMLHttpRequest();
-        var res = true;
-        oXML.open("DELETE", "../api/persona/" + id);
-        oXML.onreadystatechange = function () {
-            res = (oXML.readyState == 4 && oXML.status == 200);
-        }
-        oXML.send();        
-        setTimeout(listar, 1000);
-    }    
-}
+
 
 function borrar(id) {
     //Comprobar si la Id está vacía   
@@ -56,6 +42,7 @@ function borrar(id) {
         setTimeout(listar, 1000);
     }
 }
+
 
 function crear(e) {
     e.preventDefault();
@@ -97,11 +84,12 @@ class Persona {
 function convertirFecha(inputFormat) {
     function pad(s) { return (s < 10) ? '0' + s : s; }
     var d = new Date(inputFormat);
-    return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join('/');
+    return [pad(d.getDate()), pad(d.getMonth() + 1), d.getFullYear()].join('-');
 }
 
 //Mostrar datos en el form
-function editar(id) {    
+function editar(id) { 
+    
     var oXML = new XMLHttpRequest();
     oXML.open("GET", "../api/persona/"+id);    
     oXML.onreadystatechange = function () {
@@ -112,23 +100,29 @@ function editar(id) {
             p = dato;
             document.getElementById("txtPNombre").value = p.nombre;
             document.getElementById("txtPApellidos").value = p.apellidos;
-            document.getElementById("txtPFechaNamicion").value = new Date(p.fechaNac);
             document.getElementById("txtPDireccion").value = p.direccion;
             document.getElementById("txtPTelefono").value = p.telefono;
+
+            //Putafecha
             var fecha = new Date(p.fechaNac);
             var year = fecha.getFullYear();
             var month = fecha.getMonth();
-            var day = fecha.getDay();
-            var fechaBien(fecha.get);
-            alert(fechadate);
+            var day = fecha.getDay()>9?fecha.getDay():"0"+fecha.getDay();
+            var fechaBien = year + "-" + month+1+ "-" + day  ;
+            document.getElementById("txtPFechaNamicion").value = fechaBien;
+
+            //alert(fechadate);
+            document.getElementById("btnSubmit").value = "MODIFICAR";
+            document.getElementById("btnSubmit").removeEventListener("click", crear);
+            document.getElementById("btnSubmit").addEventListener("click", function () { actualizar(id) });
+            //document.getElementById("btnCerrar").addEventListener()
         } 
-            
     };    
     oXML.send();
 }
     
    
-function actualizar() {
+function actualizar(id) {
     var oActualizar = new XMLHttpRequest();
     
     //Crear objeto persona    
@@ -140,17 +134,21 @@ function actualizar() {
     
     //Comprobar persona válida
     if (nombre != "" && apellidos != "" && fechaNac != null && direccion != "" && telefono != "") {
-        alert("Datos válidos");
-        var p = new Persona(nombre, apellidos, 0, fechaNac, direccion, telefono);
+        alert(id);
+        var p = new Persona(nombre, apellidos, id, fechaNac, direccion, telefono);
         var json = JSON.stringify(p);
 
         //Reinsertar persona en la sociedad
         var oXML = new XMLHttpRequest();
         var res = true;
-        oXML.open("PUT", "../api/Persona/" + id, true);
+        oXML.open("PUT", "../api/Persona/" + id);
         oXML.setRequestHeader("Content-Type", "application/json")        
         oXML.send(json);
 
         setTimeout(listar, 1000);
+
+        document.getElementById("btnSubmit").value = "CREAR";
+        document.getElementById("btnSubmit").removeEventListener("click", function () { e.preventDefault; actualizar(id) });
+        document.getElementById("btnSubmit").addEventListener("click", crear);
     }  
 }
