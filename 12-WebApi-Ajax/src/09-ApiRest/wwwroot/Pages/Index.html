@@ -1,27 +1,31 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
+    <meta charset="ISO-8859-1" />
     <title>HOLA</title>
+    <link href="../Bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../Bootstrap/css/miEstilo.css">
     <script src="../Scripts/JavaScript.js"></script>
 </head>
-<body>   
+<body style="background-color: #f9f0ff;">   
     <h2>Personas</h2>
-    <div id="txtContenedor" style="border:black 1px solid"></div>
-    <br />
+    <div id="txtContenedor" style="border:black 1px solid; padding:10px;"></div>
     <!--<input id="txbIDBorrar" type="text" placeholder="ID de la persona" inputmode="numeric"/>-->    
     <!--<button id="btnBorrar" onclick="borrar()">BORRAR</button>-->
     <br /><br />
-    <div id="txtCreacion" style="border:black 1px solid">
-        <form>           
+
+    <div class="slider" id="txtCreacion" style="border:black 1px solid; padding:10px;">
+        <form class="form-group">
             Nombre:   <input id="txtPNombre" type="text" placeholder="Nombre" /><br />
             Apellidos:   <input id="txtPApellidos" type="text" placeholder="Apellidos" /><br />
-            Fecha de Nacimiento:   <input id="txtPFechaNamicion" type="date" placeholder="dd/mm/aaaa" /><br />
+            Fecha de Nacimiento:   <input id="txtPFechaNamicion" type="date" placeholder="dd/mm/aaaa"/><br />
             Dirección:   <input id="txtPDireccion" type="text" placeholder="Dirección" /><br />
             Teléfono:   <input id="txtPTelefono" type="text" placeholder="Teléfono" /><br />
-            <button id="btnSubmit">CREAR</button>
-            <button id="btnCerrar">CERRAR</button>                      
+            <button id="btnSubmit" class="btn btn-default">CREAR</button>
+            <button id="btnCerrar" class="btn btn-default">CERRAR</button>                      
         </form>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../Bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
