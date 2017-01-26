@@ -1,0 +1,17 @@
+.miBody {
+    background-image: http://static.tumblr.com/5e4f5551fc0f492e0cfbf41c8cbd9fc8/vucjlks/sYnmkhwfv/tumblr_static_website_background_light_purple.jpg
+    background-color: #f0dcf2;
+}
+
+.slider:active {
+	overflow-y: hidden;
+	max-height: 500px;
+
+	transition-property: all;
+	transition-duration: .5s;
+	transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.slider {
+	max-height: 0;
+}
